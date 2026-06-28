@@ -31,3 +31,53 @@
     display: none;
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  width: 100%;
+}
+
+.animate-marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  min-width: 100%;
+}
+
+/* Card hover glow / radial shine effect */
+.card-glow-spotlight {
+  position: relative;
+}
+
+.card-glow-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(
+    300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+    rgba(0, 255, 209, 0.15),
+    transparent 80%
+  );
+  border-radius: inherit;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-glow-spotlight:hover::before {
+  opacity: 1;
+}
+

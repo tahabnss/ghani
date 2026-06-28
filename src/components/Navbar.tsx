@@ -18,6 +18,34 @@ export default function Navbar({ onCartClick, cartCount, onNavigate, activeSecti
 
   return (
     <header className="fixed top-0 w-full z-50 glass-nav border-b border-white/10 shadow-2xl transition-transform duration-300">
+      {/* Sliding text announcement bar */}
+      <div className="w-full bg-[#0a0a0a]/90 border-b border-white/5 py-1.5 overflow-hidden animate-marquee-container">
+        <div className="animate-marquee-content text-[#00ffd1] font-mono text-[9px] tracking-widest uppercase">
+          <span className="inline-block px-4 font-semibold">★ 4.9/5 RATED ON TRUSTADVISOR (840+ BUYER STORIES)</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">LIVRAISON EXPRESS PREMIUM OFFERTE</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">GARANTIE CERTIFIÉE DE 3 ANS</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold">SATISFAIT OU REMBOURSÉ SOUS 30 JOURS</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">ASSISTANCE CONCIERGERIE PRIVÉE 24/7</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          
+          {/* Duplicate for infinite loop spacing */}
+          <span className="inline-block px-4 font-semibold">★ 4.9/5 RATED ON TRUSTADVISOR (840+ BUYER STORIES)</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">LIVRAISON EXPRESS PREMIUM OFFERTE</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">GARANTIE CERTIFIÉE DE 3 ANS</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold">SATISFAIT OU REMBOURSÉ SOUS 30 JOURS</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+          <span className="inline-block px-4 font-semibold text-white">ASSISTANCE CONCIERGERIE PRIVÉE 24/7</span>
+          <span className="inline-block px-4 text-white/30">&bull;</span>
+        </div>
+      </div>
+
       <div className="flex justify-between items-center px-6 md:px-16 py-4 max-w-7xl mx-auto">
         
         {/* Mobile menu trigger */}

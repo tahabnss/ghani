@@ -28,7 +28,7 @@ export default function Hero({ onShopClick, backgroundTheme, onChangeTheme }: He
   const currentBg = backgrounds[backgroundTheme];
 
   return (
-    <section className="relative w-full h-[100svh] flex flex-col justify-end overflow-hidden pb-12 px-6 md:px-16 pt-[80px]">
+    <section className="relative w-full h-[100svh] flex flex-col justify-end overflow-hidden pb-12 px-6 md:px-16 pt-[115px]">
       {/* Background with zoom effect */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -42,7 +42,7 @@ export default function Hero({ onShopClick, backgroundTheme, onChangeTheme }: He
       </div>
 
       {/* Background Look Selector - Exquisite interaction for customers */}
-      <div className="absolute top-24 right-6 md:right-16 z-20 flex bg-black/50 backdrop-blur-md rounded-full p-1 border border-white/10 shadow-lg">
+      <div className="absolute top-32 right-6 md:right-16 z-20 flex bg-black/50 backdrop-blur-md rounded-full p-1 border border-white/10 shadow-lg">
         <button
           id="btn-theme-dark-noir"
           onClick={() => onChangeTheme('dark-noir')}

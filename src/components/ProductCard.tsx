@@ -10,9 +10,18 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onViewDetails, onAddToCartDirect }: ProductCardProps) {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+    e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+  };
+
   return (
     <div 
-      className="group relative bg-[#1c1b1b] rounded-lg border border-white/5 overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:border-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] flex flex-col h-full"
+      onMouseMove={handleMouseMove}
+      className="group relative bg-[#1c1b1b] rounded-lg border border-white/5 overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:border-white/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] flex flex-col h-full card-glow-spotlight"
     >
       {/* Product Image Stage */}
       <div className="aspect-[4/5] bg-[#0e0e0e] relative overflow-hidden cursor-pointer" onClick={() => onViewDetails(product)}>

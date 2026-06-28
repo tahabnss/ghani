@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import JournalSection from './components/JournalSection';
 import StoryModal from './components/StoryModal';
 import AboutSection from './components/AboutSection';
+import ReviewsSection from './components/ReviewsSection';
 
 import { Product, CartItem, Review } from './types';
 import { products, reviews, stories } from './data';
@@ -205,13 +206,16 @@ export default function App() {
             </div>
           </div>
 
+          {/* Dynamic luxury reviews from clients */}
+          <ReviewsSection initialReviews={reviews} />
+
           {/* Curated Editorial Journal */}
           <JournalSection onStoryClick={setSelectedStory} />
         </>
       )}
 
       {activeSection === 'collections' && (
-        <div ref={collectionsRef} className="pt-32 pb-24 px-6 md:px-16 max-w-7xl mx-auto w-full">
+        <div ref={collectionsRef} className="pt-36 pb-24 px-6 md:px-16 max-w-7xl mx-auto w-full">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div>
               <span className="font-mono text-[10px] text-[#00ffd1] uppercase tracking-widest font-bold block mb-1">
@@ -256,13 +260,13 @@ export default function App() {
       )}
 
       {activeSection === 'journal' && (
-        <div className="pt-28">
+        <div className="pt-36">
           <JournalSection onStoryClick={setSelectedStory} />
         </div>
       )}
 
       {activeSection === 'about' && (
-        <div className="pt-28">
+        <div className="pt-36">
           <AboutSection />
         </div>
       )}

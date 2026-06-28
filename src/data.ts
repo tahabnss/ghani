@@ -175,7 +175,7 @@ export const reviews: Review[] = [
     author: 'Elena R.',
     rating: 5,
     date: '28 Avril 2026',
-    comment: 'Le son du Nova Audio est extrêmement pur. J\'étais sceptique sur le prix pour une "dropshipping boutique", mais la qualité de fabrication est digne d\'un orfèvre.',
+    comment: 'Le son du Nova Audio est extrêmement pur. J\'étais sceptique sur le prix pour une boutique d\'importation, mais la qualité de fabrication est digne d\'un orfèvre.',
     verified: true
   },
   {
@@ -184,6 +184,30 @@ export const reviews: Review[] = [
     rating: 4,
     date: '02 Juin 2026',
     comment: 'L\'enceinte Aurum est magnifique sur sa plaque de marbre. Son éclairage tamisé crée une ambiance cinéma irrésistible le soir dans le salon.',
+    verified: true
+  },
+  {
+    id: 'r4',
+    author: 'Victoire de S.',
+    rating: 5,
+    date: '18 Juin 2026',
+    comment: 'Le service conciergerie a répondu à ma question en moins de 3 minutes à 23h. La livraison par transporteur privé avec signature s\'est déroulée de manière extrêmement professionnelle.',
+    verified: true
+  },
+  {
+    id: 'r5',
+    author: 'Marc-Antoine D.',
+    rating: 5,
+    date: '24 Juin 2026',
+    comment: 'Le contrôle de l\'éclairage d\'Aurum s\'intègre parfaitement avec mon système intelligent de maison. Le marbre Nero Marquina possède des veines blanches d\'un chic inouï.',
+    verified: true
+  },
+  {
+    id: 'r6',
+    author: 'Chantal G.',
+    rating: 5,
+    date: '26 Juin 2026',
+    comment: 'Commandé l\'Aura Control Pad pour mon studio d\'architecte. L\'épaisseur de 4.9mm est spectaculaire et l\'interface en verre dépoli est d\'une réactivité parfaite.',
     verified: true
   }
 ];
